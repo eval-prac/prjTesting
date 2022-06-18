@@ -5,15 +5,22 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 public class ServiceCas2Test {
 
 	private ServiceCas2 serviceCas2 = new ServiceCas2();
 	
-	@Test
-	void test_valid() throws Exception {
-		Double result = serviceCas2.calcForm(10, 11, 12);
-		assertTrue(result > 0.02395 && result < 0.02396, "Cas2 calcul OK)");
+	@ParameterizedTest
+	@CsvSource({
+		"10, 11, 12",
+		"2, 5, 9",
+		"20, 30, 40"
+	})
+	void test_valid(int x, int y, int z) throws Exception {
+		Double result = serviceCas2.calcForm(x, y, z);
+		assertTrue(result > Math.sqrt(x)/(y * z) - 0.001 && result < Math.sqrt(x)/(y * z) + 0.001, "Cas2 calcul OK)");
 	}
 
 	@Test
