@@ -6,7 +6,7 @@ public class ServiceCas4 {
 
 	private ArrayList<Boolean> tables = null;
 	
-	public void loadSetup(ArrayList<Boolean> tableData) throws Exception {
+	public void loadSetup(ArrayList<Boolean> tableData) {
 		this.tables = tableData;
 	}
 	

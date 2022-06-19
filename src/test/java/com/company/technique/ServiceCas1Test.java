@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
-public class ServiceCas1Test {
+class ServiceCas1Test {
 
 	private ServiceCas1 serviceCas1 = new ServiceCas1();
 

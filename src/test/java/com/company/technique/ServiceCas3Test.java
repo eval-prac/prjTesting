@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-public class ServiceCas3Test {
+class ServiceCas3Test {
 
 	private ServiceCas3 serviceCas3 = new ServiceCas3();
 

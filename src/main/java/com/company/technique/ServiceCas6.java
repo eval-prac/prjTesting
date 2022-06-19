@@ -27,17 +27,17 @@ public class ServiceCas6 {
 	 */
 	public ArrayList<String> mixElement(ArrayList<String> elements) throws Exception {
 
-		TreeMap<String, String> storage = new TreeMap<String, String>();
+		TreeMap<String, String> storage = new TreeMap<>();
 		
 		try {
 			for (String oneElement : elements) {
-				String KeyValue = getEncryptedString(oneElement);
-				storage.put(KeyValue, oneElement);
+				String keyValue = getEncryptedString(oneElement);
+				storage.put(keyValue, oneElement);
 			}
 		} catch (Exception ex) {
 			throw new Exception("Problem during processing", ex);
 		}
 		
-		return new ArrayList<String>(storage.values());
+		return new ArrayList<>(storage.values());
 	}
 }

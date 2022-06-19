@@ -8,10 +8,10 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-public class ServiceCas2Test {
+class ServiceCas2Test {
 
 	private ServiceCas2 serviceCas2 = new ServiceCas2();
-	
+
 	@ParameterizedTest
 	@CsvSource({
 		"10, 11, 12",
